@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Murali's Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://kit.fontawesome.com/22efbb606e.js" crossorigin="anonymous"></script>
+</head>
+<body>
+<div id="header">       
+    <div class="container">
+        <nav>
+            <div style="margin-top:22px ; font-size: 30px; font-style: italic; color: #fff;font-family: 'Times New Roman', Times, serif;"> MMC-<span class="logo">Portfolio</span></div>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Services</a></li>
+                <li><a href="#">Portfolio</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+        <div class="header-text">
+            <h1>Hi, I'm <span>C Murali Madhav</span>  </h1>
+            <p> <span>Competitive Coder</span> and <span>Full stack Developer</span></p>
+        </div>
+    </div>
+</div>
+
+<!--about-->
+<div id="about">
+    <div class="container">
+        <div class="row">
+            <div class="about-col-1">
+                <img src="images/Images/about me 3.JPG">
+            </div>
+            <div class="about-col-2">
+                <h1 class="sub-title">About Me</h1>
+                <p>Innovative, task driven professional, identifying, and providing the technological needs of the organizations through ingenious innovation with a team and on an individual level.</p>
+
+
+                <div class="tab-titles">
+                    <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                    <p class="tab-links" onclick="opentab('achievements')">Achievements</p>
+                    <p class="tab-links" onclick="opentab('education')">Education</p>
+                </div>
+                <div class="tab-contents active-tab" id="skills">
+                    <ul>
+                        <li><span>Computer Languages</span><br>C++,Python,Js,HTML,Css,Java</li>
+                        <li><span>Web Development</span><br>Web App Development <br> Front End <br>backend(middlewares and Authentication)</li>
+                        <li><span>Software Packages</span><br>React, Node JS, Mern , Devops System design</li>
+                    </ul>
+                </div>
+                <div class="tab-contents" id="achievements">
+                    <ul>
+                        <li><span>IEEE</span><br>Contested in IEEEXTREME 17.0 during first semester and our team placed Top 13% in India, Top 19% in all over the world and First Place (Best team) in Haryana.</li>
+                        <li><span>Jee Advanced</span><br>Air(All India Rank)-5649 </li>
+                        <li><span>Codeforces</span><br>Codeforces Rating-830max Achieved</li>
+                        <li><span>Public Speaking Contest</span><br>Placed Second in the State Level Public Speaking Contest organized by the daily newspaper The Hindu.</li>
+                    </ul>
+                </div>
+                <div class="tab-contents" id="education">
+                    <ul>
+                        <li><span>2023-Presnt</span><br>Pursuing 1st year B.Tech (CS&AI) at Newton School of Technology, Rishihood University, Haryana State, INDIA. Secured First Rank in the First semester of with SGPA of 9.619/10.</li>
+                        <li><span>2019-2023</span><br>Completed senior secondary education in Suguna Padmalaya International Public School, Coimbatore, Tamil Nadu affiliated to CBSE. </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!--services-->
+<div id="services">
+    <div class="container">
+        <h1 class="sub-title">My Services</h1>
+        <div class="services-list">
+            <div>
+                <i class="fa-brands fa-chrome"></i>
+                <h2>Web Design</h2>
+                <p>Custom Web Design,Responsive Design for mobile and tablet devices,Landing Page Design</p>
+                <a href="#">Learn more</a>
+            </div>
+            <div>
+                <i class="fa-solid fa-server"></i>
+                <h2>Backend Development</h2>
+                <p>Middlewares,Authentication,Database Management</p>
+                <a href="#">Learn more</a>
+            </div>
+            <div>
+                <i class="fa-brands fa-app-store-ios"></i>
+                <h2>Web App Development</h2>
+                <p>Designing the overall structure and architecture of the web application to ensure scalability, performance, and maintainability,providing end-to-end solutions for web applications.</p>
+                <a href="#">Learn more</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--portolio-->
+<div id="portfolio">
+    <div class="container">
+        <h1 class="sub-title">My Work</h1>
+        <div class="worl-list">
+            <div class="work">
+                <img src="images/Images/work-1.png" alt="">
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    var tablinks = document.getElementsByClassName("tab-links");
+    var tabcontents = document.getElementsByClassName("tab-contents");
+
+    function opentab(tabname){
+        for (var i = 0; i < tablinks.length; i++) {
+            tablinks[i].classList.remove("active-link");
+        }
+
+        for (var i = 0; i < tabcontents.length; i++) {
+            tabcontents[i].classList.remove("active-tab");
+        }
+        event.currentTarget.classList.add("active-link");
+        document.getElementById(tabname).classList.add("active-tab");
+    }
+</script>
+
+</body>
+</html>
